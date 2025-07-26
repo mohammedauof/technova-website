@@ -390,3 +390,9 @@ body {
     color: #555;
 }
 
+/*Contact Page*/
+.contact-preview{
+    background-color: #c0fff5;
+    padding: 20px;
+    width: 100%;
+}
