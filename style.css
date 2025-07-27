@@ -56,53 +56,103 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 90vh;  /* Almost full screen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #4E54C8, #8F94FB);
-    padding: 0 2rem;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Three slides layered on top of each other */
+.hero::before,
+.hero::after,
+.hero div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: fadeSlider 15s infinite;
+  z-index: -2;
+}
+
+/* Each image gets a different animation delay */
+.hero::before {
+  background-image: url('Images/herophoto1.jpg');
+  animation-delay: 0s;
+}
+
+.hero::after {
+  background-image: url('Images/herophoto2.jpg');
+  animation-delay: 5s;
+}
+
+.hero div::before {
+  background-image: url('Images/herophoto3.jpg');
+  animation-delay: 10s;
+}
+
+/* Fade-in, stay, fade-out cycle */
+@keyframes fadeSlider {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+/* Content styling */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hero-content h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.tagline {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 400;
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.event-details {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #1e88e5;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
 }
 
-/* Button Styling */
-.btn-primary {
-    background-color: #00C9A7;
-    color: white;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0px 4px 12px rgba(0, 201, 167, 0.3);
+.btn:hover {
+  background: #0d47a1;
 }
 
-.btn-primary:hover {
-    background-color: #02b290;
-    transform: scale(1.05);
-}
 
 /* About Preview Section */
 .about-preview {
@@ -348,8 +398,10 @@ body {
 .team-grid {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
     flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .team-card {
@@ -357,12 +409,13 @@ body {
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
     padding: 1.5rem;
-    max-width: 250px;
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 250px;
-    height: 350px;
 }
+
 
 .team-card:hover {
     transform: translateY(-5px);
@@ -390,3 +443,47 @@ body {
     color: #555;
 }
 
+/* Overlay Effect */
+.team-card {
+    position: relative;  /* So overlay can sit on top */
+    overflow: hidden;    /* Hide any overflow */
+}
+
+.team-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;                     /* Hidden by default */
+    transition: opacity 0.4s ease;  /* Smooth fade effect */
+}
+
+.team-card:hover .overlay {
+    opacity: 1;                     /* Show on hover */
+}
+
+/* Style icons */
+.team-card .overlay img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* Make icons white */
+    transition: transform 0.3s ease;
+}
+
+.team-card .overlay img:hover {
+    transform: scale(1.2);  /* Slight zoom on hover */
+}
+
+
+/*Contact Page*/
+.contact-preview{
+    background-color: #c0fff5;
+    padding: 20px;
+    width: 100%;
+}
