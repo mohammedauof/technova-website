@@ -8,50 +8,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="Images\TechNova_horizontal_logo.png" alt="TechNova" width="100px">
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="speakers.html">Speakers</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="team.html">Our Team</a></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Images/TechNova_horizontal_logo.png" alt="TechNova" width="100px">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <main>
     <section class="contact-preview">
-    <div class="contact-container">
-        <div class="contact-text">
-            <h2>Fill the form to contact us</h2>
-            <form>
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="mname">Middle name:</label>
-                <input type="text" id="mname" name="mname"><br>
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname"><br>
-                <p>Your Gender:</p>
-                <input type="radio" id="male" name="Gender" value="Male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="Gender" value="Female">
-                <label for="male">Female</label><br>
-                <label for="gmail">Gmail:</label>
-                <input type="text" id="gmail" name="gmail"><br>
-                <label for="number">Number:</label>
-                <input type="text" id="number" name="number"><br>
+        <div class="contact-container">
+            <h1>Contact TechNova 2025</h1>
+            <p>Have questions or want to collaborate? Fill out the form below and we’ll get back to you soon.</p>
+
+            <form action="#" method="post">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required><br>
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required><br>
+
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label>
+                        <input type="radio" name="gender" value="male" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                </fieldset><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" name="number" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="40" required></textarea>
+
+                <label>
+                    <input type="checkbox" id="consent" name="consent" required>I agree to allow my data to be stored and contacted
+                </label>
                 <input type="submit" value="Submit">
-            </form> 
+            </form>
         </div>
-    </div>
     </section>
+    </main>
 
-
-
-
-
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="Images\TechNova_horizontal_logo.png" alt="TechNova" class="footer-logo">
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="Images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="Images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+            <div class="footer-contact">
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 TechNova. All rights reserved.</p>
+    </footer>
+    
 </body>
 </html>
