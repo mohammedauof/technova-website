@@ -551,6 +551,7 @@ form textarea {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   transition: border 0.3s ease;
+  resize: none;
 }
 
 form input:focus,
