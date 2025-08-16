@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Speakers — TechNova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --page-bg: #f3f5f7;
+      --card-bg: #ffffff;
+      --accent-blue: #dff6fb;
+      --glow-color: #0099ff; 
+      --soft-shadow: 0 10px 18px rgba(19,24,33,0.08);
+      --card-radius: 14px;
+      --container-width: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      font-family: "Nunito", system-ui, sans-serif;
+      background: var(--page-bg);
+      color: #111;
+    }
+
+    .wrap {
+      max-width: var(--container-width);
+      margin: 36px auto;
+      padding: 0 22px 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 6px 0 20px;
+    }
+
+    .section-title h1 {
+      font-family: "Patrick Hand", cursive;
+      font-size: 72px;
+      line-height: 0.95;
+      letter-spacing: 3px;
+      margin: 0;
+      color: #111;
+      text-transform: uppercase;
+    }
+
+    .section-title .underline {
+      width: 86%;
+      max-width: 1100px;
+      height: 8px;
+      background: #111;
+      margin: 18px auto 34px;
+      border-radius: 6px;
+      transform: rotate(-1deg);
+      box-shadow: 0 2px 0 rgba(0,0,0,0.06) inset;
+    }
+
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      align-items: start;
+      padding: 8px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: var(--soft-shadow);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 320px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeSlideUp 0.8s ease forwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.8s; }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 18px 32px rgba(0, 0, 0, 0.15),
+                  0 0 18px var(--glow-color); /* Blue glow */
+      border: 2px solid var(--glow-color);
+    }
+
+    .image-frame {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: var(--accent-blue);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .image-frame {
+      transform: scale(1.05);
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .speaker-name {
+      margin-top: 18px;
+      font-family: "Patrick Hand", cursive;
+      font-size: 28px;
+      text-align: center;
+      color: #111;
+      transition: color 0.3s ease;
+    }
+
+    .speaker-company {
+      margin-top: 6px;
+      font-size: 16px;
+      opacity: 0.9;
+      font-weight: 600;
+      text-align: center;
+      color: #222;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover .speaker-name {
+      color: #0077cc;
+    }
+    .card:hover .speaker-company {
+      color: #005599;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border-radius: 16px;
+      pointer-events: none;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      z-index: -1;
+    }
+
+    @media (max-width: 1100px) {
+      .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-title h1 { font-size: 56px; }
+    }
+
+    @media (max-width: 520px) {
+      .speakers-grid { grid-template-columns: 1fr; }
+      .section-title h1 { font-size: 44px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+    <h1>Our Top 4 Speakers of the Month</h1>
+    <div class="underline" aria-hidden="true"></div>
+
+  <section class="speakers-grid" aria-label="Speakers list">
+
+    <article class="card">
+      <div class="image-frame">
+        <img src="C:\\Users\\hp\\Desktop\\TN2025\\speaker.jpg" alt="Speaker Abdul Rehman">
+      </div>
+      <div class="speaker-name">Abdul Rehman</div>
+      <div class="speaker-company">TedTalk</div>
+    </article>
+
+    <article class="card">
+      <div class="image-frame">
+        <img src="C:\\Users\\hp\\Desktop\\TN2025\\speaker.jpg" alt="Speaker Ananya Kashyap">
+      </div>
+      <div class="speaker-name">Ananya Kashyap</div>
+      <div class="speaker-company">TapeBit</div>
+    </article>
+
+    <article class="card">
+      <div class="image-frame">
+        <img src="C:\\Users\\hp\\Desktop\\TN2025\\speaker.jpg" alt="Speaker Mansi Singh">
+      </div>
+      <div class="speaker-name">Mansi Singh</div>
+      <div class="speaker-company">StakeX</div>
+    </article>
+
+    <article class="card">
+      <div class="image-frame">
+        <img src="C:\\Users\\hp\\Desktop\\TN2025\\speaker.jpg" alt="Speaker Sana Sheikh">
+      </div>
+      <div class="speaker-name">Sana Sheikh</div>
+      <div class="speaker-company">Flotext</div>
+    </article>
+
+  </section>
+</div>
+
+</body>
+</html>
