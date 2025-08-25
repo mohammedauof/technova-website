@@ -712,3 +712,42 @@ form input[type="submit"]:hover {
   box-shadow: 0 4px 12px rgba(78, 84, 200, 0.4);
 }
 
+.thankyou-section {
+  min-height: calc(100vh - 200px); /* Adjust this if your header + footer height is different */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec); /* Soft pastel gradient */
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thankyou-section h2 {
+  font-size: 2.5rem;
+  color: #4E54C8; /* Teal tone */
+  margin-bottom: 1rem;
+}
+
+.thankyou-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.thankyou-section a {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #4E54C8;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.thankyou-section a:hover {
+  background-color: #4E54C8;
+}
