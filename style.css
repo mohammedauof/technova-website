@@ -208,6 +208,15 @@ body {
   font-size: 16px;
 }
 
+.cbox {
+  font-size: 14px;
+  color: #333;
+}
+
+.cbox input {
+  margin-right: 6px;
+}
+
 .form-container button {
   padding: 12px;
   background: linear-gradient(135deg, #4E54C8, #8F94FB);
@@ -239,13 +248,18 @@ body {
   }
 }
 
-.cbox {
-  font-size: 14px;
-  color: #333;
+.thank-you {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #4E54C8;
+  background: #F5F7FA;
+  text-align: center;
+  border-radius: 8px;
 }
 
-.cbox input {
-  margin-right: 6px;
+#submitted:target {
+  display: block;
 }
 
 
