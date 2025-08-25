@@ -154,6 +154,82 @@ body {
 }
 
 
+.registration-section {
+  padding: 50px 20px;
+  background: #f5f7fa;
+}
+
+.registration-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;   /* 👈 makes both columns equal height */
+  max-width: 1000px;
+  margin: auto;
+  gap: 20px;
+}
+
+.guidelines,
+.form-container {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guidelines h2,
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #4E54C8;
+}
+
+.guidelines ul {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-container input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-container button {
+  padding: 12px;
+  background: linear-gradient(135deg, #4E54C8, #8F94FB);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .registration-container {
+    flex-direction: column;
+  }
+}
+
+
 /* About Preview Section */
 .about-preview {
     padding: 4rem 10%;
