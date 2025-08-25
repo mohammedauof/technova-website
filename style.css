@@ -587,12 +587,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    opacity: 0;                     /* Hidden by default */
-    transition: opacity 0.4s ease;  /* Smooth fade effect */
+    opacity: 0;                     
+    transition: opacity 0.4s ease;  
 }
 
 .team-card:hover .overlay {
-    opacity: 1;                     /* Show on hover */
+    opacity: 1;                     
 }
 
 /* Style icons */
@@ -604,11 +604,11 @@ body {
 }
 
 .team-card .overlay img:hover {
-    transform: scale(1.2);  /* Slight zoom on hover */
+    transform: scale(1.2);
 }
 
 
-/* Contact Page Styles */
+/* Contact Page */
 
 /* Page Layout */
 .contact-preview {
@@ -727,7 +727,7 @@ form input[type="submit"]:hover {
 
 .thankyou-section h2 {
   font-size: 2.5rem;
-  color: #4E54C8; /* Teal tone */
+  color: #4E54C8; 
   margin-bottom: 1rem;
 }
 
