@@ -713,14 +713,14 @@ form input[type="submit"]:hover {
 }
 
 .thankyou-section {
-  min-height: calc(108vh - 200px); /* Adjust this if your header + footer height is different */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #e0f7fa, #fce4ec); /* Soft pastel gradient */
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
   color: #333;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
