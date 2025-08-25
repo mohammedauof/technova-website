@@ -223,6 +223,15 @@ body {
   opacity: 0.9;
 }
 
+#rbtn{
+    width: 104%;
+}
+
+#rbtn:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(78, 84, 200, 0.4);
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .registration-container {
