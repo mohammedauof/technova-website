@@ -918,5 +918,75 @@ form input[type="submit"]:hover {
 
 
 /*Speaker's Page */
+.speakers-page {
+    padding: 60px 10%;
+    background: #f5f7fa;
+}
 
-/*end of speaker */
+.speakers-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4E54C8;
+}
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.speakerpage-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.speakerpage-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.speakerpage-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.speakerpage-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.speakerpage-card .role {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.speakerpage-card .bio {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* ✅ Added styling for summary to remove default arrow and style it like a card */
+.speakerpage-card summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.speakerpage-card summary::-webkit-details-marker {
+    display: none;
+}
+
+/*end of speaker page */
