@@ -26,41 +26,51 @@
     </header>
 
     <main>
-        <section class="contact-preview">
-            <div class="contact-container">
-                <h1>Contact TechNova 2025</h1>
-                <p>Have questions or want to collaborate? Fill out the form below and we’ll get back to you soon.</p>
+    <section class="contact-section">
+        <div class="contact-map-container">
+            <h2>Meet Us Here</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1675332165414!2d77.58279687454639!3d12.961129315108833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15de1e8beb91%3A0x45a731927a7cc2a5!2sJain%20Deemed-to-be%20University%20-%20School%20of%20Sciences%20(Under-graduate)!5e0!3m2!1sen!2sin!4v1756478766884!5m2!1sen!2sin" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
 
-                <form action="thankyou.html" method="get">
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="Enter your First name" required><br>
+        <div class="contact-container">
+            <h1>Contact TechNova 2025</h1>
+            <p>Have questions or want to collaborate? Fill out the form below and we’ll get back to you soon.</p>
 
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br>
+            <form action="thankyou.html" method="get">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter your First name" required><br>
 
-                    <fieldset>
-                        <legend>Gender</legend>
-                        <label><input type="radio" name="gender" value="male" required> Male</label>
-                        <label><input type="radio" name="gender" value="female"> Female</label>
-                    </fieldset><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your mail" required>
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </fieldset><br>
 
-                    <label for="number">Phone Number:</label>
-                    <input type="tel" id="number" name="number" placeholder="Enter your phone number (Please don't add +91)" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your mail" required>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" cols="40" placeholder="Enter your message. We will review your message and get back to you soon" required></textarea>
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" name="number" placeholder="Enter your phone number (Please don't add +91)" required>
 
-                    <label><input type="checkbox" id="consent" name="consent" required> I agree to allow my data to be stored and contacted</label>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="40" placeholder="Enter your message. We will review your message and get back to you soon" required></textarea>
 
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </section>
+                <label><input type="checkbox" id="consent" name="consent" required> I agree to allow my data to be stored and contacted</label>
 
-    </main>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+</main>
+
 
 
     <footer class="footer">
