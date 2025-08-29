@@ -930,7 +930,7 @@ form input[type="submit"]:hover {
     color: #4E54C8;
 }
 
-.speakers-grid {
+.speakerspage-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
@@ -979,7 +979,6 @@ form input[type="submit"]:hover {
     margin-top: 10px;
 }
 
-/* ✅ Added styling for summary to remove default arrow and style it like a card */
 .speakerpage-card summary {
     list-style: none;
     cursor: pointer;
