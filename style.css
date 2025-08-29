@@ -918,19 +918,19 @@ form input[type="submit"]:hover {
 
 
 /*Speaker's Page */
-.speakers-page {
+.speakerpage-wrapper {
     padding: 60px 10%;
     background: #f5f7fa;
 }
 
-.speakers-page h2 {
+.speakerpage-wrapper h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
     color: #4E54C8;
 }
 
-.speakerspage-grid {
+.speakerpage-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
@@ -966,13 +966,13 @@ form input[type="submit"]:hover {
     color: #333;
 }
 
-.speakerpage-card .role {
+.speakerpage-role {
     font-weight: bold;
     color: #666;
     margin-bottom: 10px;
 }
 
-.speakerpage-card .bio {
+.speakerpage-bio {
     font-size: 0.95rem;
     color: #444;
     line-height: 1.5;
@@ -987,5 +987,6 @@ form input[type="submit"]:hover {
 .speakerpage-card summary::-webkit-details-marker {
     display: none;
 }
+
 
 /*end of speaker page */
