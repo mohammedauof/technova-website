@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #F5F7FA;
-    padding-top: 80px; /* Adjust based on navbar height */
+    padding-top: 80px; 
 }
 
 /* Navbar */
@@ -30,7 +30,7 @@ body {
 }
 
 .logo img {
-    height: 50px;      /* Adjust size */
+    height: 50px;      
     width: auto;
     display: block;
 }
@@ -51,8 +51,65 @@ body {
 }
 
 .nav-links a:hover {
-    color: #00C9A7; /* Teal hover */
+    color: #00C9A7; 
 }
+
+/* Hamburger */
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #fff; /* Matches your navbar text/logo */
+  border-radius: 2px;
+}
+
+/* Mobile menu */
+#menu-toggle {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(to bottom, #4E54C8, #8F94FB);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: right 0.3s ease;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Slide-in menu when checkbox is checked */
+  #menu-toggle:checked ~ .nav-links {
+    right: 0;
+  }
+}
+
 
 /* Hero Section */
 .hero {
