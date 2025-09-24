@@ -69,7 +69,7 @@ body {
 .hamburger span {
   display: block;
   height: 3px;
-  background-color: #fff; /* Matches your navbar text/logo */
+  background-color: #fff;
   border-radius: 2px;
 }
 
@@ -99,7 +99,6 @@ body {
     transition: right 0.3s ease;
   }
 
-  /* Show hamburger */
   .hamburger {
     display: flex;
   }
@@ -137,7 +136,7 @@ body {
   z-index: -2;
 }
 
-/* Each image gets a different animation delay */
+
 .hero::before {
   background-image: url('Images/herophoto1.jpg');
   animation-delay: 0s;
@@ -153,7 +152,7 @@ body {
   animation-delay: 10s;
 }
 
-/* Fade-in, stay, fade-out cycle */
+/* Fade in fade out */
 @keyframes fadeSlider {
   0% { opacity: 0; }
   10% { opacity: 1; }
@@ -162,7 +161,7 @@ body {
   100% { opacity: 0; }
 }
 
-/* Dark overlay */
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -173,7 +172,6 @@ body {
   z-index: -1;
 }
 
-/* Content styling */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -343,13 +341,13 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #4E54C8; /* Purple heading */
+    color: #4E54C8; 
 }
 .about-text h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     margin-bottom: 2rem;
-    color: #4E54C8; /* Purple heading */
+    color: #4E54C8; 
 }
 .about-text li {
     margin-bottom: 1rem
@@ -531,7 +529,7 @@ body {
 .footer-social img {
     height: 25px;
     margin: 0 0.5rem;
-    filter: brightness(0) invert(1); /* Makes icons white */
+    filter: brightness(0) invert(1); 
     transition: transform 0.3s ease;
 }
 
@@ -548,7 +546,7 @@ body {
 }
 
 .footer-contact a:hover {
-    color: #00C9A7; /* Teal hover */
+    color: #00C9A7; 
 }
 
 /* Copyright Text */
@@ -598,7 +596,7 @@ body {
 .introsec-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover ensures it fills area while maintaining aspect ratio */
+    object-fit: cover; 
     display: block;
     border-radius: 5px;
 }
@@ -794,7 +792,7 @@ body {
 /* Overlay Effect */
 .team-card {
     position: relative;  /* So overlay can sit on top */
-    overflow: hidden;    /* Hide any overflow */
+    overflow: hidden;   
 }
 
 .team-card .overlay {
@@ -803,7 +801,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -820,7 +818,7 @@ body {
 .team-card .overlay img {
     width: 40px;
     height: 40px;
-    filter: brightness(0) invert(1); /* Make icons white */
+    filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
 }
 
@@ -837,9 +835,9 @@ body {
   padding: 60px 20px;
   background: #F5F7FA;
   justify-content: center;
-  align-items: stretch; /* Make both sides same height */
+  align-items: stretch; 
   font-family: 'Poppins', sans-serif;
-  min-height: 500px; /* Optional minimum height */
+  min-height: 500px; 
 }
 
 .contact-map-container,
