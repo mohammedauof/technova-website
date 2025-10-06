@@ -1090,5 +1090,39 @@ form input[type="submit"]:hover {
     display: none;
 }
 
-
 /*end of speaker page */
+
+
+/* Gallery Page */
+.gallery {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #F5F7FA;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/* End of Gallery Page */
