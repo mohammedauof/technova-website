@@ -869,7 +869,7 @@ body {
   width: 100%;     /* Full width */
   border: 0;
   border-radius: 10px;
-  min-height: 0;   /* Helps with flexbox rendering */
+  min-height: 0;   
 }
 
 /*Form*/
