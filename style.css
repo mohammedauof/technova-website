@@ -791,7 +791,7 @@ body {
 
 /* Overlay Effect */
 .team-card {
-    position: relative;  /* So overlay can sit on top */
+    position: relative;  
     overflow: hidden;   
 }
 
