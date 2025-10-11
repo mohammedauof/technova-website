@@ -217,7 +217,7 @@ body {
 .registration-container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;   /* 👈 makes both columns equal height */
+  align-items: stretch;   /* makes both columns equal height */
   max-width: 1000px;
   margin: auto;
   gap: 20px;
